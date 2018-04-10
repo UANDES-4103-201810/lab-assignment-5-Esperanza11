@@ -1,28 +1,39 @@
 Rails.application.routes.draw do
-  
+
+  get "/tickets/:id", to: "tickets#show"
+
   post "/tickets", to: "tickets#create"
 
-  delete "/tickets", to: "tickets#destroy"
+  delete "/tickets/:id", to: "tickets#destroy"
 
-  patch "/tickets", to: "tickets#update"
+  patch "/tickets/:id", to: "tickets#update"
+
+  get "/events/:id", to: "events#show"
 
   post "/events", to: "events#create"
 
-  delete "/events", to: "events#destroy"
+  delete "/events/:id", to: "events#destroy"
 
-  patch "/events", to: "events#update"
+  patch "/events/:id", to: "events#update"
+
+  get "/places/:id", to: "places#show"
 
   post "/places", to: "places#create"
 
-  delete "/places", to: "places#destroy"
+  delete "/places/:id", to: "places#destroy"
 
-  patch "/places", to: "places#update"
+  patch "/places/:id", to: "places#update"
+
+  get "/users/:id", to: "users#show"
 
   post "/users", to: "users#create"
 
-  delete "/users", to: "users#destroy"
+  delete "/users/:id", to: "users#destroy"
 
-  patch "/users", to: "users#update"
+  patch "/users/:id", to: "users#update"
+
+
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
